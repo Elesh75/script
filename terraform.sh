@@ -15,6 +15,7 @@ mv tfsec-linux-amd64 /usr/local/bin/tfsec
 [ -d .terraform ] && rm -rf .terraform
 rm -f *.tfplan
 
+echo $(aws sts get-caller-identity)
 sleep 2
 terraform fmt -recursive
 terraform init
