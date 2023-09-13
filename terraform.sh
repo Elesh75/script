@@ -38,8 +38,11 @@ terraform plan -out=${TF_PLAN}
 
 if [ ! -f "${TF_PLAN}" ]; then
   echo "****Plan does not exist!****"
+else
+  echo "*****Plan exist****"
+fi
 
-# terraform apply 
+# terraform apply ${TF_PLAN}
 
 cd /path/to/directory
 
